@@ -1,0 +1,178 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{\textbf{12.10.6}}
+\author{EE23BTECH11040-MANOJ KUMAR AMBATIPUDI$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question:}
+\\
+A beam of light consisting of two wavelengths, 650 nm and 520 nm, is used to
+obtain interference fringes in a Young\text{'}s double-slit experiment.\\
+(a) Find the distance of the third bright fringe on the screen from
+the central maximum for wavelength 650 nm.\\
+(b) What is the least distance from the central maximum where the
+bright fringes due to both the wavelengths coincide?
+\\
+
+\textbf{Solution:}
+\\
+Let the wave equations of the 2 waves coming to interfere be \begin{align}
+    y_1 = A_1sin(2\pi f_ct)\\
+        y_2 = A_2sin(2\pi f_ct +\phi)
+	\end{align}
+	Where $A_1$ and $A_2$ are amplitudes of waves and $f_c$ is the frequency of the waves. 
+	Using principle of superposition, we get 
+	\begin{align}
+	    y &= y_1+y_2 
+	    \end{align}
+	    where $y$ is the resultant wave and $y_1$,$y_2$ are initial waves. Expanding $sin(2\pi f_ct+\phi)$, we get 
+	    \begin{align}
+	        y&=(A_1+A_2cos(\phi))sin(2\pi f_ct)+(A_2sin(\phi))sin(2\pi f_ct)
+		\end{align}
+		Assuming
+		\begin{align}
+		    A_1+A_2cos(\phi)&=Rcos(\theta)\\
+		        A_2sin(\phi)&=Rsin(\theta)
+			\end{align}
+			here R is the resultant and $\theta$ is the phase difference
+			we get,
+			\begin{align}
+			    y&=Rsin(2\pi f_ct+\theta)
+			    \end{align}
+			    and 
+			    \begin{align}
+			        R^2&=A_1^2+A_2^2+2A_1A_2cos(\theta)
+				\end{align}
+				For any Electromagnetic Wave, \\
+				Intensity(I) $\alpha$ $(\text{Amplitude})^2$
+				\begin{align}
+				    I_{net} &= I_1+I_2+2\sqrt{I_1I_2}cos(\theta)
+				    \end{align}
+				    From (9), it is clear that maximum intensity occurs when
+				    \begin{align}
+				        \theta = 2n\pi
+					\end{align}
+					For any wave, phase difference $\theta$ is given by
+					\begin{align}
+					    \theta = \frac{2\pi\Delta x}{\lambda}
+					    \end{align}
+					    Now, path difference $\Delta x$ is given as
+					    \begin{align}
+					        \Delta x &=\frac{\lambda}{2\pi}\theta\\
+						    \implies\Delta x &= \frac{\lambda}{2\pi}2n\pi\\
+						        \implies\Delta x &= n\lambda
+							\end{align}
+							Equation (14) is the condition for constructive Interference.\\
+
+							Now we will derive the condition for constructive interference in a YDSE setup.\\
+
+							In a YDSE setup, the 2 sources are seperated by a distance "d", the distance between screen and mid point of sources is "D" and $\theta$ is the angle made by point of interest with horizontal line. The path difference between the 2 waves interfereing at the point of interest is given by 
+							\begin{align}
+							    \Delta x = dsin(\theta)
+							    \end{align}
+							    Now, from (14) and (15), we can write,
+							    \begin{align}
+							        dsin(\theta)=n\lambda
+								\end{align}
+								Now, for small values of $\theta$, we can approximate 
+								\begin{align}
+								    sin(\theta)=\dfrac{y}{D}
+								    \end{align}
+								    upon substituting in (16) and rearranging, we get
+								    \begin{align}
+								        y=n\dfrac{D\lambda}{d}
+									\end{align}
+									Now,we shall use the above equation to solve the questions. 
+									\\
+									(a) Finding the distance of the third bright fringe on the screen from the central maximum for wavelength
+									\begin{align}
+									\lambda_1 = 650 \, \text{nm}
+									\end{align}
+									The path difference for constructive interference is given by:
+									\begin{align}
+									\Delta x_1 = m\lambda_1     
+									\end{align}
+									where  m = 3  for the third bright fringe.
+
+									Substitute the values:
+									\begin{align}
+									\Delta x_1 &= 3\times650 = 1950 \, \text{nm} \\
+									y &= \Delta x_1\cdot\dfrac{D}{d} = 1950\times\dfrac{D}{d}
+									\end{align}
+
+									Where "D" is the distance of screen from sources, "d" is the distance between sources and "y" is the distance from Central Maxima.\\
+
+
+									(b) The least distance from the central maximum where the bright fringes due to both wavelengths coincide:
+
+									Given \[\lambda_1 = 650 \text{nm} ,\lambda_1 = 520 \text{nm}\]
+
+									Let $\Delta x$  be the common path difference for both wavelengths:
+									\begin{align}
+									\Delta x &= m \lambda_1 = n\lambda_2 \\
+									\frac{n}{m} &= \frac{\lambda_1}{\lambda_2} = \frac{650}{520}\\
+									\frac{n}{m} &= \frac{5}{4}
+									\end{align}
+									Now we can assume n = 5 and m = 4.\\
+									Path difference $\Delta x = 4\times650 = 2600 \text{nm}$\\\\
+									Now $y = \Delta x\cdot \dfrac{D}{d} = 2600\times \dfrac{D}{d}$\\\\
+									where "y" is the distance from central maxima, "D" is the distance of screen from sources and "d" is the distance between sources.
+
+									\textbf{Answer for (b):}
+									\\
+									Hence, at a least distance of $2600\times\dfrac{D}{d}$ the bright fringes due to  both wavelengths coincide.
+
+									\end{document}
+
