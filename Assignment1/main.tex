@@ -1,0 +1,134 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+\title{\textbf{NCERT 12/10/6}}
+\author{EE23BTECH11040-MANOJ KUMAR AMBATIPUDI$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\textbf{Question:}
+\\
+A beam of light consisting of two wavelengths, 650 nm and 520 nm, is used to
+obtain interference fringes in a Young\text{'}s double-slit experiment.\\
+(a) Find the distance of the third bright fringe on the screen from
+the central maximum for wavelength 650 nm.\\
+(b) What is the least distance from the central maximum where the
+bright fringes due to both the wavelengths coincide?
+\\
+\textbf{Solution:}
+\input{codes/tab_1}
+Consider single source interference. Let the wave equations of the 2 waves coming from $\lambda$ source be $y_1$,$y_2$.
+Assume an impulse emitted at source, travelling through the path labeled \textbf{Wave 1} be $t_1$ and for travelling through path \textbf{Wave 2} be $t_2$ respectively. The corresponding wave equations are
+\begin{align}
+    y_1 = Asin(2\pi f_c t_1)\\
+    y_2 = Asin(2\pi f_c t_2)\label{12/10/6/1}
+\end{align}
+$t_2$ can be written in terms of $t_1$ as
+\begin{align}
+    t_2 = t_1 + \Delta t
+\end{align}
+Where the term $\Delta t$ arises because of paths chosen.
+the values of $t_1, t_2$ are 
+\begin{align}
+    t_1 &= \frac{\sqrt{\brak{\dfrac{d}{2}-b_1}^{2}+(a_1)^{2}} + \sqrt{\brak{\dfrac{d}{2}-y}^{2}+(D)^{2}}}{c}\\
+    t_2 &= \frac{\sqrt{\brak{\dfrac{d}{2}+y}^{2}+(D)^{2}} + \sqrt{\brak{\dfrac{d}{2}+b_1}^{2}+(a_1)^{2}}}{c}
+\end{align}
+Assuming the approximations 
+\begin{align}
+    b_1&<<a_1\\
+    b_1&\sim d\\
+    d&<<D\\
+    \brak{1+x}^{n}&\simeq1+nx
+\end{align}
+We get
+\begin{align}
+    \Delta t &= \frac{\frac{db_1}{a_1} + \frac{dy}{D}}{c} \label{12/10/6/2}
+\end{align}
+On substituting $t_2$ in \eqref{12/10/6/1} and applying superposition theorem, we get
+\begin{align}
+    Y &= y_1 + y_2\\
+    Y &= 2A\sin\brak{2\pi f_c\brak{t_1 + \frac{\Delta t}{2}}}\cos\brak{2\pi f_c\brak{\frac{\Delta t}{2}}}
+\end{align}
+For constructive interference
+\begin{align}
+     f \Delta t = n
+\end{align}
+substituting in \eqref{12/10/6/2}, we get
+\begin{align}
+    \frac{db_1}{a_1} + \frac{dy}{D} = n\lambda \label{12/10/6/3}
+\end{align}
+The equation \eqref{12/10/6/3} is the condition for constructive interference.
+For 2 sources, we do it as follows.
+From \figref{fig_12/10/6/2}, 
+\begin{align}
+    \frac{db_1}{a_1} + \frac{dy}{D} = n_1\lambda_1\\
+    \frac{db_2}{a_2} + \frac{dy}{D} = n_2\lambda_2
+\end{align}
+Now, for lights from both sources to interfere at a point constructively, 
+\begin{align}
+    n_1\lambda_1 = n_2\lambda_2 \label{12/10/6/4}
+\end{align}
+(a) From \tabref{tab_12/10/6/1} and \eqref{12/10/6/3}, taking $b_1 = 0$
+\begin{align}
+    n_1 &= 3\\
+    y &= \frac{n_1\lambda_1 D}{d}\\
+    y &= 1950\frac{D}{d}
+\end{align}
+(b) From \tabref{tab_12/10/6/1}, \eqref{12/10/6/3}, \eqref{12/10/6/4} and taking $b_1 = 0$, $b_2 = 0$
+\begin{align}
+  n_1 \lambda_1 &= n_2\lambda_2 \\
+\frac{n_2}{n_1} &= \frac{\lambda_1}{\lambda_2} = \frac{650}{520}\\
+\frac{n_2}{n_1} &= \frac{5}{4}
+\end{align}
+Now we can assume $n_2$ = 5k and $n_1$ = 4k where k is some positive integer.
+For smallest value of $y$ we shall take $k=1$.
+\begin{align}
+    y =\Delta x_1 \dfrac{D}{d} = 2600\dfrac{D}{d}nm 
+\end{align}
+\input{codes/fig_1}
+\input{codes/fig_2}
+\end{document}
