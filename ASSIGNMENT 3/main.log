@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.1.28)  16 FEB 2024 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.2.19)  20 FEB 2024 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1279,24 +1279,16 @@ LaTeX Warning: Reference `eq:APSum' on page 1 undefined on input line 67.
 
 LaTeX Warning: Reference `eq:APSum' on page 1 undefined on input line 68.
 
-<figs/fig_0.jpg, id=8, 462.528pt x 346.896pt>
-File: figs/fig_0.jpg Graphic file (type jpg)
-<use figs/fig_0.jpg>
-Package pdftex.def Info: figs/fig_0.jpg  used on input line 113.
-(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/fig_1.jpg, id=9, 462.528pt x 346.896pt>
+<figs/fig_1.jpg, id=8, 462.528pt x 346.896pt>
 File: figs/fig_1.jpg Graphic file (type jpg)
 <use figs/fig_1.jpg>
-Package pdftex.def Info: figs/fig_1.jpg  used on input line 120.
+Package pdftex.def Info: figs/fig_1.jpg  used on input line 107.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}
 
 
-] [2
-
- <./figs/fig_0.jpg> <./figs/fig_1.jpg>]
-(./main.aux)
+ <./figs/fig_1.jpg>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
@@ -1309,10 +1301,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30327 strings out of 474267
- 594001 string characters out of 5749989
- 1966555 words of memory out of 5000000
- 51849 multiletter control sequences out of 15000+600000
+ 30314 strings out of 474267
+ 593795 string characters out of 5749989
+ 1961555 words of memory out of 5000000
+ 51841 multiletter control sequences out of 15000+600000
  636300 words of font info for 208 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,12n,103p,1172b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1323,10 +1315,10 @@ onts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 110373 bytes).
+Output written on main.pdf (1 page, 84321 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 82 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
