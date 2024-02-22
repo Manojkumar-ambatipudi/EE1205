@@ -67,34 +67,20 @@ From \eqref{eq1}, corresponding Laplace transform,
 Since it is causal LTI system, 
 \begin{align}
     y\brak{0} &= 0\\
-    Y\brak{s} + \frac{1}{4}sY\brak{s} &= 2X\brak{s}\\
+	Y\brak{s} + \frac{1}{4}sY\brak{s} &= 2X\brak{s}\\
     Y\brak{s} &= X\brak{s}\frac{8}{4 + s}\\
     H\brak{s} &= \frac{8}{4 + s}\quad ROC:Re\brak{s} > -4
 \end{align}
-Using Inverse Laplace formula, 
-\begin{align}
-    h\brak{t} = \frac{1}{2\pi j}\lim_{T \to \infty} \int_{c - jT}^{c + jT} e^{st} H\brak{s} ds
-\end{align}
-Where $c$ is some number in the $ROC$ of $H\brak{s}$. Substituting $c = 0$, 
-\begin{align}
-    h\brak{t} = \frac{1}{2\pi j}\lim_{T \to \infty} \int_{- jT}^{+ jT} e^{st} \frac{8}{4 + s} ds
-\end{align}
-Using Cauchy's Residue Theorem, 
-\begin{align}
-    h\brak{t} &= \lim_{s \to -4}\brak{s + 4}\frac{8e^{st}}{s + 4}\\
-              &= \lim_{s \to -4}8e^{st}\\
-              &= 8e^{-4t}
-\end{align}
-Since the system is causal, 
+Taking inverse laplace transform and applying causality conditions 
 \begin{align}
     h\brak{t} = 8e^{-4t}u\brak{t}
 \end{align}
-\begin{figure}
+\begin{figure}[h]
 \renewcommand\thefigure{1}
     \centering
     \includegraphics[width=1.0\columnwidth]{figs/fig_1.jpg}
     \caption{Plot of $h\brak{n}$, taken from python3}
-    \label{fig:1}
+    \label{fig:enter-label}
 \end{figure}
 
 \end{document}
