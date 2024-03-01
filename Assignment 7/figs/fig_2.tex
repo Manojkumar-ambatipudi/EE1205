@@ -1,0 +1,12 @@
+\begin{figure}[h]
+\renewcommand\thefigure{1}
+    \centering
+    \begin{circuitikz}[american]
+    \draw (0,0) to (1,0) to (1,-2) to [generic=$4\Omega$] (3,-2) to [V=$\frac{30}{s}V$,invert](5,-2) to (5,0) to  [generic=$1\Omega$](7,0) to [generic=$0.5s$](7,-2) to [V=$Li_L\brak{0}$,invert](7,-4) to (0,-4) to [V=$\frac{10}{s}V$,invert](0,0);
+    \draw (1,0) to[ospst] (5,0);
+    % Add a label for the open switch
+    \node at (3,0.8) {\scriptsize{Open at $t=0$}};
+    \end{circuitikz}
+    \caption{Circuit in $S$ domain}
+    \label{fig:EE_21_29_2}
+\end{figure}
