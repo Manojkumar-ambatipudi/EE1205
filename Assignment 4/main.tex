@@ -1,4 +1,4 @@
-%\iffalse
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -58,6 +58,7 @@ Let a causal LTI system be governed by the following differential equation,
 \end{align}
 where $x\brak{t}$ and $y\brak{t}$ are the input and output respectively. It's impulse response is 
 \hfill (GATE EE-2022)\\
+\fi
 \textbf{Solution:}
 
 From \eqref{eq1}, corresponding Laplace transform, 
@@ -67,9 +68,9 @@ From \eqref{eq1}, corresponding Laplace transform,
 Since it is causal LTI system, 
 \begin{align}
     y\brak{0} &= 0\\
-	Y\brak{s} + \frac{1}{4}sY\brak{s} &= 2X\brak{s}\\
-    Y\brak{s} &= X\brak{s}\frac{8}{4 + s}\\
-    H\brak{s} &= \frac{8}{4 + s}\quad ROC:Re\brak{s} > -4
+	\implies Y\brak{s} + \frac{1}{4}sY\brak{s} &= 2X\brak{s}\\
+    \implies Y\brak{s} &= X\brak{s}\frac{8}{4 + s}\\
+    \implies H\brak{s} &= \frac{8}{4 + s}\quad ROC:Re\brak{s} > -4
 \end{align}
 Taking inverse laplace transform and applying causality conditions 
 \begin{align}
@@ -78,9 +79,7 @@ Taking inverse laplace transform and applying causality conditions
 \begin{figure}[h]
 \renewcommand\thefigure{1}
     \centering
-    \includegraphics[width=1.0\columnwidth]{figs/fig_1.jpg}
+    \includegraphics[width=1.0\columnwidth]{2022/EE/46/figs/fig_1.jpg}
     \caption{Plot of $h\brak{n}$, taken from python3}
     \label{fig:enter-label}
 \end{figure}
-
-\end{document}

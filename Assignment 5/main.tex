@@ -1,4 +1,4 @@
-%\iffalse
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -54,11 +54,12 @@
 \renewcommand{\thetable}{\theenumi}
 \textbf{QUESTION:}
 In the bandpass filter circuit shown, $R_0 = 50\Omega$, $L_0 = 1 mH$, $C_0 = 10nF$. The q factor of the filter is 
-\input{figs/fig_1}
+\input{2022/IN/33/figs/fig_1}
 \textbf{SOLUTION:}
-\input{tables/table_1}\\
+\fi
+\input{2022/IN/33/tables/table_1}\\
 The corresponding Laplace domain circuit is 
-\input{figs/fig_2}
+\input{2022/IN/33/figs/fig_2}
 Input $X\brak{s}$ can be written as
 \begin{align}
     X\brak{s} = I\brak{s}\brak{sL_0 + \frac{1}{sC_0} + R_0} 
@@ -104,8 +105,7 @@ Substituting the values from \tabref{tab_22_33_1}, we get
 \begin{figure}
 \renewcommand\thefigure{1}
     \centering
-    \includegraphics[width=1.0\columnwidth]{figs/fig_1.jpg}
+    \includegraphics[width=1.0\columnwidth]{2022/IN/33/figs/fig_1.jpg}
     \caption{Transfer function $\abs{H\brak{j, \omega}}$ taken from python3}
     \label{fig:enter-label}
 \end{figure}
-\end{document}
