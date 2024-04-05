@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <complex.h>
-#define PI 3.1415926535
 
 // Function to compute FFT
-complex double *myfft(int n, complex double *a) {
+complex double *my_fft(int n, complex double *a) {
     if (n == 1) return a;
     complex double *g = (complex double *)malloc(n/2 * sizeof(complex double));
     complex double *h = (complex double *)malloc(n/2 * sizeof(complex double));
@@ -13,10 +12,10 @@ complex double *myfft(int n, complex double *a) {
         if (i % 2) h[i/2] = a[i];
         else g[i/2] = a[i];
     }
-    g = myfft(n/2, g);
-    h = myfft(n/2, h);
+    g = my_fft(n/2, g);
+    h = my_fft(n/2, h);
     for (int i = 0; i < n; i++) 
-        a[i] = g[i%(n/2)] + cexp(-I*2*PI*i/n)*h[i%(n/2)];
+        a[i] = g[i%(n/2)] + cexp(-I*2*M_PI*i/n)*h[i%(n/2)];
     free(g); free(h);
     return a;
 }
@@ -33,7 +32,7 @@ int main() {
     }
 
     // Compute FFT
-    data = myfft(n, data);
+    data = my_fft(n, data);
 
     // Print FFT result
     printf("FFT result:\n");
@@ -46,3 +45,4 @@ int main() {
 
     return 0;
 }
+
