@@ -140,10 +140,8 @@ where $D_1 = \frac{1}{(1 - \delta)^2}-1$ and $D_2 = \frac{1}{\delta^2} - 1$ and 
 \input{tables/filter_design_tab}
 we get $N\geq 4$ and $0.489 \leq \epsilon \leq 0.61$\\
 \newpage
-The below code plots \eqref{eq:mag_freq_response} for different values of $\epsilon$ .
-\begin{lstlisting}
 
-\end{lstlisting}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/plot1.png}
@@ -174,17 +172,11 @@ where $k$ is the index of the pole and \\
     B_k &= \frac{1}{N} \sinh^{-1}\brak{\frac{1}{\epsilon}}
 \end{align}
 
-The below code computes the values of $s_k$ and stores it in a text file. 
-\begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/blob/main/Filter_Design/codes/sk_gen.c
-\end{lstlisting}
+
 The poles obtained are formulated in the table below.
 \input{tables/sk_tab}
 
-The below code plots the pole-zero plot.
-\begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/blob/main/Filter_Design/codes/plot1.py
-\end{lstlisting}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\columnwidth]{figs/Pole_Zero_plt.png}
